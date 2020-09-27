@@ -107,21 +107,39 @@ inv.bind("<Button-1>", sc)
 seven = Button(text='7', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("7"))
 eight = Button(text='8', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("8"))
 nine = Button(text='9', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("9"))
-plus = Button(text='+', relief=RAISED, bg='black', fg='white', padx=30, pady=10, command=lambda: click("+"))
-div = Button(text='/', relief=RAISED, bg='black', fg='white', padx=31, pady=10, command=lambda: click("/"))
+plus = Button(text='+', relief=RAISED, bg='black', fg='white', padx=32, pady=10, command=lambda: click("+"))
+div = Button(text='/', relief=RAISED, bg='black', fg='white', padx=35, pady=10, command=lambda: click("/"))
 
 # keys  in 5th row
 four = Button(text='4', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("4"))
 five = Button(text='5', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("5"))
 six = Button(text='6', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("6"))
-subs = Button(text='-', relief=RAISED, bg='black', fg='white', padx=30, pady=10, command=lambda: click("-"))
-mult = Button(text='*', relief=RAISED, bg='black', fg='white', padx=31, pady=10, command=lambda: click("*"))
+subs = Button(text='-', relief=RAISED, bg='black', fg='white', padx=33, pady=10, command=lambda: click("-"))
+mult = Button(text='*', relief=RAISED, bg='black', fg='white', padx=35, pady=10, command=lambda: click("*"))
 
+# keys  in 6th row
+one = Button(text='1', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("1"))
+two = Button(text='2', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("2"))
+three = Button(text='3', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("3"))
+mod = Button(text='%', relief=RAISED, bg='black', fg='white', padx=30, pady=10, )
+mod.bind("<Button-1>", sc)
+brop = Button(text='(', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("("))
+brcl = Button(text=')', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click(")"))
+
+# keys  in 5th row
+dot = Button(text='.', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("."))
+zero = Button(text='0', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("0"))
+pi = Button(text='pi', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, )
+pi.bind("<Button-1>", sc)
+exp = Button(text='e', relief=RAISED, bg='black', fg='white', padx=30, pady=10, )
+exp.bind("<Button-1>", sc)
+equal = Button(text='=', relief=RAISED, bg='black', fg='white', padx=31, pady=10, command=lambda: click("="))
 
 # keys gride in first row
 back.grid(row=1, column=0)
 AC.grid(row=1, column=4)
-
+brop.grid(row=1 column=2)
+brcl.grid(row=1column=3)
 # keys gride in second row
 sqrt.grid(row=2, column=0)
 sqr.grid(row=2, column=1)
@@ -132,7 +150,7 @@ deg.grid(row=2, column=4)
 # keys gride in third row
 sin.grid(row=3, column=0)
 cos.grid(row=3, column=1)
-tan.grid(row=3, column=2)
+tan.grid(row=3, column=2)      
 fac.grid(row=3, column=3)
 inv.grid(row=3, column=4)
 
@@ -149,5 +167,18 @@ five.grid(row=5, column=1)
 six.grid(row=5, column=2)
 subs.grid(row=5, column=3)
 mult.grid(row=5, column=4)
+
+# keys gride in 6th row
+one.grid(row=6, column=0)
+two.grid(row=6, column=1)
+three.grid(row=6, column=2)
+mod.grid(row=6, column=3)
+
+# keys gride in 7th row
+dot.grid(row=7, column=0)
+zero.grid(row=7, column=1)
+pi.grid(row=7, column=2)
+exp.grid(row=7, column=3)
+equal.grid(row=7, column=4)
 
 window.mainloop()
