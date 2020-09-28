@@ -2,7 +2,7 @@ import math as m
 from tkinter import *
 
 window = Tk()
-window.title("SCIENTIFIC CALCULATOR")  # This is the heading for the calculator
+window.title("SCIENTIFIC CALCULATOR BY DEEPAK MS ")  # This is the heading for the calculator
 # e is the input window
 e = Entry(window, width=75, borderwidth=5, relief=RIDGE, fg="white", bg="Black")
 e.grid(row=0, columnspan=5, padx=10, pady=25)
@@ -79,6 +79,8 @@ def evaluate():  # This function store the answer and delete the input and show 
 # keys  in first row
 back = Button(text='DEL', relief=RAISED, bg='Red', fg='white', command=lambda: bksps(), padx=20, pady=5)
 AC = Button(text='AC', relief=RAISED, bg='Red', fg="White", command=lambda: clear(), padx=29, pady=5)
+brop = Button(text='(', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("("))
+brcl = Button(text=')', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click(")"))
 
 # keys  in second row
 sqrt = Button(text='sqrt', relief=RAISED, bg='black', fg='white', padx=29, pady=10)
@@ -123,8 +125,6 @@ two = Button(text='2', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, c
 three = Button(text='3', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, command=lambda: click("3"))
 mod = Button(text='%', relief=RAISED, bg='black', fg='white', padx=30, pady=10, )
 mod.bind("<Button-1>", sc)
-brop = Button(text='(', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("("))
-brcl = Button(text=')', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click(")"))
 
 # keys  in 5th row
 dot = Button(text='.', relief=RAISED, bg='gray', fg='white', padx=32, pady=10, command=lambda: click("."))
@@ -133,13 +133,14 @@ pi = Button(text='pi', relief=RAISED, bg='gray', fg='white', padx=29, pady=10, )
 pi.bind("<Button-1>", sc)
 exp = Button(text='e', relief=RAISED, bg='black', fg='white', padx=30, pady=10, )
 exp.bind("<Button-1>", sc)
-equal = Button(text='=', relief=RAISED, bg='black', fg='white', padx=31, pady=10, command=lambda: click("="))
+equal = Button(text='=', relief=RAISED, bg='black', fg='white', padx=31, pady=10, command=lambda: evaluate())
 
 # keys gride in first row
 back.grid(row=1, column=0)
+brop.grid(row=1, column=1)
+brcl.grid(row=1, column=2)
 AC.grid(row=1, column=4)
-brop.grid(row=1 column=2)
-brcl.grid(row=1column=3)
+
 # keys gride in second row
 sqrt.grid(row=2, column=0)
 sqr.grid(row=2, column=1)
